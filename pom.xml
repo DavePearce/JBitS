@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <!-- ============================================== -->
+  <!-- Configuration -->
+  <!-- ============================================== -->  
+  
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.whiley</groupId>
+  <artifactId>JBitS</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+
+  <licenses>
+    <license>
+      <name>BSD 3-Clause License</name>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+
+  <!-- ============================================== -->
+  <!-- Description -->
+  <!-- ============================================== -->  
+
+  <name>Java Bitwise Serialisation</name>
+  <description>
+    A serialisation scheme perhaps reminiscent of protobuf, where
+    binary content can be transformed to/from Java Objects based on
+    provided schema's.  There are some differences though.  In
+    particular, binary content can be modified (within the bounds of
+    its schema) producing new content as a delta over the original.
+  </description>
+
+  <url>https://github.com/DavePearce/JBitS</url>
+  
+  <scm>
+    <url>https://github.com/DavePearce/JBitS</url>
+  </scm>
+
+  <developers>
+    <developer>
+      <id>redjamjar</id>
+      <name>David J. Pearce</name>
+      <email>david.pearce@ecs.vuw.ac.nz</email>
+      <url>http:s//whileydave.com</url>
+    </developer>
+  </developers>
+
+  <!-- ============================================== -->
+  <!-- Dependencies -->
+  <!-- ============================================== -->
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.5.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>  
+    
+  <!-- ============================================== -->
+  <!-- Build -->
+  <!-- ============================================== -->
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <release>10</release>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
