@@ -24,8 +24,8 @@ import jbits.core.Content;
 import jbits.util.Byte;
 
 /**
- * Tests for which <code>jledger.util.Diff</code> which are constructed from
- * exhaustive enumerations of replacements over given strings.
+ * Tests for <code>jbits.util.Diff</code> which are constructed from exhaustive
+ * enumerations of replacements over given strings.
  *
  * @author David J. Pearce
  *

@@ -44,8 +44,8 @@ public class Content {
 	}
 
 	/**
-	 * Provides a generic mechanism for describing the data layout of an object
-	 * interned on a ledger.
+	 * Provides a generic mechanism for describing the data layout of a piece of
+	 * content.
 	 *
 	 * @author David J. Pearce
 	 *
@@ -129,10 +129,10 @@ public class Content {
 	}
 
 	/**
-	 * Represents an immutable binary blob of data which can be written into a
-	 * ledger. Blobs are immutable data structures which, when written, construct
-	 * new blobs. Blobs are also elastic in that they automatically resize to
-	 * accommodate writing beyond their current bounds.
+	 * Represents an immutable binary blob of data representing a piece of content..
+	 * Blobs are immutable data structures which, when written, construct new blobs.
+	 * Blobs are also elastic in that they automatically resize to accommodate
+	 * writing beyond their current bounds.
 	 *
 	 * @author David J. Pearce
 	 *
