@@ -1,9 +1,55 @@
 package jbits.core;
 
+/**
+ * <p>
+ * Provides core interfaces for describing, representing and manipulating
+ * content. We can view the mechanism as a stack, where a raw byte array
+ * represents the lowest level:
+ * </p>
+ *
+ * <pre>
+ *
+ *       +--------------+
+ *       |  |           |                   (byte array proxy)
+ *       +--------------+
+ *       :              :
+ *       :              :
+ * +--+--+--+--+--+--+--+--+--+--+--+--+--+
+ * |                                      | (byte blob)
+ * +--+--+--+--+--+--+--+--+--+--+--+--+--+
+ * :                                      :
+ * :                                      :
+ * +--+--+--+--+--+--+--+--+--+--+--+--+--+
+ * |00|0A|01|00|00|00|F0|FF|00|00|00|00|01| (raw byte array)
+ * +--+--+--+--+--+--+--+--+--+--+--+--+--+
+ *  00 01 02 03 04 05 06 07 08 09 10 11 12
+ * </pre>
+ *
+ * <p>
+ * In the above example, we have a bytearray at the very bottom providing the
+ * raw content we are working with. This is enclosed inside a
+ * <code>Byte.Blob</code> which provides an implementation of
+ * <code>Content.Blob</code>. A blob is essentially abstracts a sequence of
+ * binary data. Thus, a blob can be ground in an array (as above) or built on
+ * top of another blob. The latter allows one to modify a blob (such as
+ * inserting or removing bytes, etc).
+ * </p>
+ *
+ * <p>
+ * Finally, at the top of stack we have the proxy object(s). These provides
+ * handy interfaces to working with raw blobs. Specifically, a proxy object
+ * corresponds to some form of data organisation in the underlying blob. In the
+ * above example, we have a <code>ByteArray</code> proxy which treats the
+ * underlying data as an array.
+ * </p>
+ *
+ * @author David J. Pearce
+ *
+ */
 public class Content {
 
 	/**
-	 * An interface for a particular version of an object on a ledger.
+	 *
 	 *
 	 * @author David J. Pearce
 	 *
