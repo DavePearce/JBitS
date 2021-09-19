@@ -3,7 +3,7 @@ package jbits.layouts;
 import jbits.core.Content;
 import jbits.core.Content.Blob;
 import jbits.core.Content.Layout;
-import jbits.util.Byte;
+import jblob.util.ByteBlob;
 
 public class Primitive {
 
@@ -39,7 +39,7 @@ public class Primitive {
 		private final int offset;
 
 		public ByteArray(byte... bytes) {
-			this.blob = Byte.Blob.EMPTY.insertInt(0, bytes.length).insertBytes(4, bytes);
+			this.blob = Byte.ByteBlob.EMPTY.insertInt(0, bytes.length).insertBytes(4, bytes);
 			this.offset = 0;
 		}
 

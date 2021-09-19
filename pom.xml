@@ -13,7 +13,8 @@
 
   <licenses>
     <license>
-      <name>BSD 3-Clause License</name>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
@@ -52,6 +53,11 @@
   <!-- ============================================== -->
   
   <dependencies>
+    <dependency>
+      <groupId>org.whiley</groupId>
+      <artifactId>jblob</artifactId>
+      <version>1.0.0</version>
+    </dependency>    
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
